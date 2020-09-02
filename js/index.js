@@ -5,7 +5,7 @@ Array.from(document.links).forEach(link => {
     })
     link.addEventListener('blur', event => {
         event.target.style.color = 'black'
-        event.stopPropagation()
+
     })
 })
 
@@ -20,6 +20,7 @@ const zoom = function(event){
     scale += event.deltaY * -0.01
     scale = Math.min(Math.max(.125, scale),4)
     busImg.style.transform = `scale(${scale})`
+    event.stopPropagation()
 }
 
 let scale = 1
