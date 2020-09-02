@@ -1,3 +1,8 @@
+import { gsap } from 'gsap';
+
+//GSAP animation
+gsap.from('.logo-heading', {opacity: 0, duration: 1 , y: -50})
+
 //Nav Updates
 Array.from(document.links).forEach(link => {
     link.addEventListener('focus', event => {
